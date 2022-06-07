@@ -8,7 +8,7 @@ import (
 
 var (
 	users = map[int64]*User{
-		123: {Id: 1, FirstName: "Jorge", LastName: "González", Email: "jgilbaja@gmail.com"},
+		123: {Id: 123, FirstName: "Jorge", LastName: "González", Email: "jgilbaja@gmail.com"},
 	}
 )
 
