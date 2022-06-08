@@ -22,7 +22,14 @@ func GetUser(resp http.ResponseWriter, req *http.Request) {
 		// Just return de bad request to the client
 		return
 	}
-	user, apiErr := services.GetUser(userId)
+
+	var item services.ItemService
+
+	item.GetItem("1")
+
+	// services.ItemService.GetItem("1")
+
+	user, apiErr := services.UserService.GetUser(userId)
 	if apiErr != nil {
 		jsonValue, _ := json.Marshal(apiErr)
 		resp.WriteHeader(apiErr.Status)
